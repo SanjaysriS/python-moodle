@@ -1,27 +1,40 @@
-Write a program that returns the last digit of the given number. Last digit is being referred to the least significant digit i.e. the digit in the ones (units) place in the given number.
+In the 1800s, the battle of Troy was led by Hercules. He was a superstitious person. He believed that his crew can win the battle only if the total count of the weapons in hand is in multiple of 3 and the soldiers are in an even number of count. Given the total number of weapons and the soldier's count, Find whether the battle can be won or not according to Hercules's belief. If the battle can be won print True otherwise print False.
 
-The last digit should be returned as a positive number.
+Input format:
 
-For example,
+Line 1 has the total number of weapons
 
-if the given number is 197, the last digit is 7
+Line 2 has the total number of Soldiers.
 
-if the given number is -197, the last digit is 7
+Output  Format:
+
+If the battle can be won print True otherwise print False.
+
+Sample Input:
+
+32
+
+43
+
+Sample Output:'
+
+False
 
 
 
 For example:
 
 Input	Result
-197
-7
--197
-7
+32
+43
+False
 
 
 
-a=int(input())
-a=(abs(a))
-c=a%10
-print(c)
 
+wps=int(input())
+sls=int(input())
+if wps%3==0 and sls%2==0:
+    print("True")
+else:
+    print("False")
