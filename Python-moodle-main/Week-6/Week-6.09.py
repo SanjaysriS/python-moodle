@@ -1,52 +1,17 @@
-Unique Names
+t=int(input())
+n=int(input())
+l1=list()
+for i in range(n):
+    a=int(input())
+    l1.append(a)
+m=int(input())
+l2=list()
+for i in range(m):
+    b=int(input())
+    l2.append(b)
 
-
-
-In this exercise, you will create a program that reads words from the user until the user enters a blank line. After the user enters a blank line your program should display each word entered by the user exactly once. The words should be displayed in the same order that they were first entered. For example, if the user enters:
-
-Input: 
-
-first
-
-second
-
-first
-
-third
-
-second
-
-
-
-then your program should display:
-
-
-
-Output:
-
-first
-
-second
-
-third
-
-
-
-
-
-a,c=[],[]
-
-for i in range(0,5):
-
-    b=input()
-
-    a.append(b)
-
-for i in range(len(a)):
-
-    if(a[i] not in c):
-
-        c.append(a[i])
-
-        print(a[i])
-
+for i in l1:
+    if i in l2:
+        print(i,end=' ')
+    else:
+        continue
