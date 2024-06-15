@@ -1,40 +1,29 @@
-Eligible to donate blood
+In London, every year during Dasara there will be a very grand doll show. People try to invent new dolls of different varieties. The best-sold doll's creator will be awarded with a cash prize. So people broke their heads to create dolls innovatively. Knowing this competition, Mr.Lokpaul tried to create a doll that sings only when an even number is pressed and the number should not be zero and greater than 100.
 
-A team from the Rotract club had planned to conduct a rally to create awareness among the Coimbatore people to donate blood. They conducted the rally successfully. Many of the Coimbatore people realized it and came forward to donate their blood to nearby blood banks. The eligibility criteria for donating blood are people should be above or equal to 18 and his/ her weight should be above 40. There was a huge crowd and staff in the blood bank found it difficult to manage the crowd. So they decided to keep a system and ask the people to enter their age and weight in the system. If a person is eligible he/she will be allowed inside.
-
- Write a program and feed it to the system to find whether a person is eligible or not.
-
-
-
-Input Format:
-
-Input consists of two integers that correspond to the age and weight of a person respectively.
-
-Output Format:
-
-Display True(IF ELIGIBLE)
-
-Display False (if not eligible)
+ IF Lokpaul wins print true, otherwise false.
 
 Sample Input
 
-19
-
-45
+10
 
 Sample Output
 
 True
 
+Explanation:
+
+Since 10 is an even number and a number between 0 and 100, True is printed
+
+
+
+For example:
+
+Input	Result
+101
+False
+
 a=int(input())
-
-b=int(input())
-
-if(a>=18 and b>40):
-
+if(a%2==0):
     print("True")
-
 else:
-
     print("False")
-
