@@ -1,32 +1,46 @@
-Compound Interest
+Note:
 
-Pretend that you have just opened a new savings account that earns 4 percent interest per year. The interest that you earn is paid at the end of the year, and is added to the balance of the savings account. Write a program that begins by reading the amount of money deposited into the account from the user. Then your program should compute and display the amount in the savings account after 1, 2, and 3 years. Display each amount so that it is rounded to 2 decimal places.
+Dont use if-else. Operators alone must be used .
 
-Sample Input:
 
-10000
 
-Sample Output:
+A team from the Rotract club had planned to conduct a rally to create awareness among the Coimbatore people to donate blood. They conducted the rally successfully. Many of the Coimbatore people realized it and came forward to donate their blood to nearby blood banks. The eligibility criteria for donating blood are people should be above or equal to 18 and his/ her weight should be above 40. There was a huge crowd and staff in the blood bank found it difficult to manage the crowd. So they decided to keep a system and ask the people to enter their age and weight in the system. If a person is eligible he/she will be allowed inside.
 
-Balance as of end of Year 1: $10400.00.
+ Write a program and feed it to the system to find whether a person is eligible or not.
 
-Balance as of end of Year 2: $10816.00.
+ Input Format:
 
-Balance as of end of Year 3: $11248.64
+ Input consists of two integers that correspond to the age and weight of a person respectively.
 
+ Output Format:
+
+ Display True(IF ELIGIBLE)
+
+Display False (if not eligible)
+
+Sample Input
+
+19
+
+45
+
+Sample Output
+
+True
+
+
+
+For example:
+
+Input	Result
+18
+40
+False
 
 
 a=int(input())
-
-b=(a*0.04)+a
-
-c=b+(b*0.04)
-
-d=c+(c*0.04)
-
-print("Balance as of end of Year 1: ${:.2f}.".format(b))
-
-print("Balance as of end of Year 2: ${:.2f}.".format(c))
-
-print("Balance as of end of Year 3: ${:.2f}.".format(d))
-
+b=int(input())
+if((a>=18)&(b>40)):
+    print("True")
+else:
+    print("False")
