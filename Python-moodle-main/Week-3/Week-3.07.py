@@ -1,5 +1,5 @@
 
-month = input()
+
 if month.lower() == "february":
     print("February has 28 or 29 days in it.")
 elif month.lower() in ["april", "june", "september", "november"]:
