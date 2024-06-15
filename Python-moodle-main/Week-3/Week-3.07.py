@@ -1,74 +1,11 @@
-Month name to days
 
-The length of a month varies from 28 to 31 days. In this exercise you will create a program that reads the name of a month from the user as a string. Then your program should display the number of days in that month. Display “28 or 29 days” for February so that leap years are addressed.
-
-
-
-
-
-Sample Input 1
-
-February
-
-Sample Output 1
-
-February has 28 or 29 days in it.
-
-Sample Input 2
-
-March
-
-Sample Output 2
-
-March has 31 days in it.
-
-Sample Input 3
-
-April
-
-Sample Output 3
-
-April has 30 days in it.
-
-For example:
-
-Input	Result
-
-February	February has 28 or 29 days in it.
-
-March	March has 31 days in it.
-
-
-
-
-
-m=input()
-
-if(m=="January"):
-
-    print(m,"has 31 days in it.")
-
-elif(m=="February"):
-
-    print(m,"has 28 or 29 days in it.")
-
-elif(m=="March"):
-
-    print(m,"has 31 days in it.")
-
-elif(m=="April"):
-
-    print(m,"has 30 days in it.")
-
-elif(m=="May"):
-
-    print(m,"has 31 days in it.")
-
-elif(m=="June"):
-
-    print(m,"has 30 days in it.")
-
-elif(m=="July"):
+month = input()
+if month.lower() == "february":
+    print("February has 28 or 29 days in it.")
+elif month.lower() in ["april", "june", "september", "november"]:
+    print(f"{month} has 30 days in it.")
+else:
+    print(f"{month} has 31 days in it.")
 
     print(m,"has 31 days in it.")
 
