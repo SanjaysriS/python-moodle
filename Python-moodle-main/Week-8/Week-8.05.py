@@ -1,88 +1,26 @@
-Remove repeated
+def sort_dict_by_value_sum():
+    # Read number of entries
+    n = int(input())
+   
+    # Initialize the dictionary
+    test_dict = {}
+   
+    # Read each entry
+    for _ in range(n):
+        entry = input().split()
+        key = entry[0]
+        values = list(map(int, entry[1:]))
+        test_dict[key] = values
+   
+    # Calculate sum of values for each key
+    sum_dict = {key: sum(values) for key, values in test_dict.items()}
+   
+    # Sort dictionary by the sum of values
+    sorted_sum_dict = dict(sorted(sum_dict.items(), key=lambda item: item[1]))
+   
+    # Print the sorted dictionary with sums
+    for key, value_sum in sorted_sum_dict.items():
+        print(f"{key} {value_sum}")
 
-Write a program to eliminate the common elements in the given 2 arrays and print only the non-repeating elements and the total number of such non-repeating elements.
-
-Input Format:
-
-The first line contains space-separated values, denoting the size of the two arrays in integer format respectively.
-
-The next two lines contain the space-separated integer arrays to be compared.
-
-
-
-Sample Input:
-
-5 4
-
-1 2 8 6 5
-
-2 6 8 10
-
-Sample Output:
-
-1 5 10
-
-3
-
-Sample  Input: 
-
-5 5
-
-1 2 3 4 5
-
-1 2 3 4 5
-
-Sample Output:
-
-NO SUCH ELEMENTS
-
-
-
-
-
-
-
-For example:
-
-Input	Result
-
-5 4
-
-1 2 8 6 5
-
-2 6 8 10	1 5 10
-
-3
-
-a=input()
-
-d=[]
-
-b=input()
-
-c=input()
-
-b=tuple(b.split(" "))
-
-c=tuple(c.split(" "))
-
-for i in b:
-
-    if i not in c:
-
-        d.append(i)
-
-for i in c:
-
-    if i not in b:
-
-        d.append(i)
-
-for i in range(len(d)):
-
-    print(int(d[i]),end=' ')
-
-print()
-
-print(len(d))
-
+if __name__ == "__main__":
+    sort_dict_by_value_sum()
