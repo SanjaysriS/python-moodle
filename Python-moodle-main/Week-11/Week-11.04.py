@@ -1,60 +1,19 @@
-Develop a Python program that safely performs division between two numbers provided by the user. Handle exceptions like division by zero and non-numeric inputs.
-
-Input Format: Two lines of input, each containing a number.
-
-Output Format: Print the result of the division or an error message if an exception occurs.
-
-
-
-
-
-For example:
-
-Input	Result
-
-10
-
-2	5.0
-
-10
-
-0	Error: Cannot divide or modulo by zero.
-
-
-
-ten
-
-5
-
-	Error: Non-numeric input provided.
-
-
-
-def main():
-
+while True:
     try:
-
-        num1 = float(input())
-
-        num2 = float(input())
-
-       
-
-        division_result = num1 / num2
-
-        modulo_result = num1 % num2
-
-       
-
-        print(division_result)
-
+        num1 = int(input(""))
+        num2 = int(input(""))
         
-
+        division_result = num1 / num2
+        modulo_result = num1 % num2
+        
+        print(f"Division result: {division_result}")
+        print(f"Modulo result: {modulo_result}")
+        break
+    
     except ValueError:
-
         print("Error: Non-numeric input provided.")
-
+        break
+    
     except ZeroDivisionError:
-
         print("Error: Cannot divide or modulo by zero.")
-
+        break
