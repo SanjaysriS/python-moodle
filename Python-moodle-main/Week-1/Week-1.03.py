@@ -1,10 +1,4 @@
-Square Root
-
 Write a simple python program to find the square root of a given floating point number. The output should be displayed with 3 decimal places.
-
-
-
-
 
 Sample Input:
 
@@ -14,19 +8,19 @@ Sample Output:
 
 2.828
 
+
+
+
+
 For example:
 
 Input	Result
-
-14.00	3.742
+14.00
+3.742
 
 
 
 import math
-
 a=float(input())
-
-s=math.sqrt(a)
-
-print("{:.3f}".format(s))
-
+a=math.sqrt(a)
+print("{:.3f}".format(a))
