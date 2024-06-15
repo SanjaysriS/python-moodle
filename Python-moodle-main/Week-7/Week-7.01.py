@@ -1,71 +1,14 @@
-Abundant Number
-
-An abundant number is a number for which the sum of its proper divisors is greater than the number itself. Proper divisors of the number are those that are strictly lesser than the number.
-
-
-
-Input Format:
-
-Take input an integer from stdin
-
-Output Format:
-
-Return Yes if given number is Abundant. Otherwise, print No
-
-Example input:
-
-12
-
-Output:
-
-Yes
-
-Explanation
-
-The proper divisors of 12 are: 1, 2, 3, 4, 6, whose sum is 1 + 2 + 3 + 4 + 6 = 16. Since sum of proper divisors is greater than the given number, 12 is an abundant number.
-
-Example input:
-
-13
-
-Output:
-
-No
-
-Explanation
-
-The proper divisors of 13 is: 1, whose sum is 1. Since sum of proper divisors is not greater than the given number, 13 is not an abundant number.
-
-
-
-For example:
-
-Test				Result
-
-print(abundant(12))		Yes
-
-print(abundant(13))		No
-
-def abundant(n):
-
-    l,s=[],0
-
-    for i in range(1,int(n//2)+1):
-
-        if(n%i==0):
-
-            l.append(i)
-
-    for i in l:
-
-        s+=i
-
-    if(s>n):
-
-        return("Yes")
-
+def is_binary_string(s):
+    characters = set(s)
+    if characters == {'0', '1'} or characters == {'0'} or characters == {'1'}:
+        return "Yes"
     else:
+        return "No"
 
-        return("No")
+s = input()
+result = is_binary_string(s)
+print(result)
 
 
+   
+ 
