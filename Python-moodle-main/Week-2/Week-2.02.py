@@ -1,33 +1,22 @@
-Doll Sings
+An online retailer sells two products: widgets and gizmos. Each widget weighs 75 grams. Each gizmo weighs 112 grams. Write a program that reads the number of widgets and the number of gizmos from the user. Then your program should compute and display the total weight of the parts.
 
-In London, every year during Dasara there will be a very grand doll show. People try to invent new dolls of different varieties. The best-sold doll's creator will be awarded with a cash prize. So people broke their heads to create dolls innovatively. Knowing this competition, Mr.Lokpaul tried to create a doll that sings only when an even number is pressed and the number should not be zero and greater than 100.
-
- IF Lokpaul wins print true, otherwise false.
-
-
-
-Sample Input
+Sample Input:
 
 10
 
-Sample Output
+20
 
-True
+Sample Output:
 
-Explanation:
-
-Since 10 is an even number and a number between 0 and 100, True is printed
+The total weight of all these widgets and gizmos is 2990 grams.
 
 
 
-a=int(input())
-
-if(a>0 and a<100 and a%2==0):
-
-    print("True")
-
-else:
-
-    print("False")
 
 
+now=int(input())
+nog=int(input())
+now=75*now
+nog=112*nog
+tw=now+nog
+print("The total weight of all these widgets and gizmos is",tw,"grams.")
