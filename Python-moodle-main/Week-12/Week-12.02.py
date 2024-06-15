@@ -1,35 +1,17 @@
-Given an integer n, print true if it is a power of four. Otherwise, print false.
-
-An integer n is a power of four, if there exists an integer x such that n == 4x.
-
-For example:
-
-Input	Result
-
-16	True
-
-5	False
-
-def is_power_of_four(n):
-
-    if n <= 0:
-
-        return False
-
-    while n > 1:
-
-        if n % 4 != 0:
-
-            return False
-
-        n //= 4
-
-    return True
-
-
-
-# Test the function
-
 n = int(input())
-
-print(is_power_of_four(n))
+nums = list(map(int, input().split()))
+k = int(input())
+freq = {}
+count = 0
+for num in nums:
+    if num in freq:
+        freq[num] += 1
+    else:
+        freq[num] = 1
+for num in freq:
+    if k == 0:
+        count += freq[num] * (freq[num] - 1) // 2  # Corrected division to integer division
+    else:
+        if num + k in freq:
+            count += freq[num] * freq[num + k]
+print(count)
