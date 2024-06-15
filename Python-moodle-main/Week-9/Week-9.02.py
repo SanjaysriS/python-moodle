@@ -1,102 +1,28 @@
-Sort Dictionary by Values Summation
-
-Give a dictionary with value lists, sort the keys by summation of values in value list.
-
- Input : test_dict = {‘Gfg’ : [6, 7, 4], ‘best’ : [7, 6, 5]}
-
-Output : {‘Gfg’: 17, ‘best’: 18}
-
-Explanation : Sorted by sum, and replaced.
-
- Input : test_dict = {‘Gfg’ : [8,8], ‘best’ : [5,5]}
-
-Output : {‘best’: 10, ‘Gfg’: 16}
-
-Explanation : Sorted by sum, and replaced.
-
- Sample Input:
-
-2
-
-Gfg 6 7 4
-
-Best 7 6 5
-
-Sample Output
-
-Gfg 17
-
-Best 18
-
- 
+def automorphic(n):
+    if (n**2)%10 == n:
+        return "Automorphic"
+    else:
+        return "Not Automorphic"
 
 
 
 
 
-For example:
 
-Input	Result
+def checkUgly(n):
+    if n <= 0:
+        return "not ugly"
+   
+    while n % 2 == 0:
+        n //= 2
+    while n % 3 == 0:
+        n //= 3
+    while n % 5 == 0:
+        n //= 5
+   
+    return "ugly" if n == 1 else"not ugly"
 
-2
-
-Gfg 6 7 4
-
-Best 7 6 5	Gfg 17
-
-Best 18
 
 
 
-a=int(input())
-
-d={}
-
-for i in range(a):
-
-    b=input()
-
-    b=b.partition(" ")
-
-    d[b[0]]=b[-1].split(" ")
-
-n=list(d.values())
-
-k=list(d.keys())
-
-for i in range(len(n)):
-
-    s=0
-
-    for j in range(len(n[i])):
-
-        s+=int(n[i][j])
-
-    d.update({k[i]:s})
-
-l=list(d.items())
-
-if(l[0][1]<l[1][1]):
-
-    for k,v in d.items():
-
-        print(k,v)
-
-else:
-
-    j=1
-
-    for k,v in d.items():
-
-        if(j==1):
-
-            k1,v1=k,v
-
-            j+=1
-
-        else:
-
-            print(k,v)
-
-    print(k1,v1)
 
