@@ -1,43 +1,30 @@
-Binary String
+def find_winner():
+    import sys
+    input = sys.stdin.read
+   
+    data = input().split()
+   
+    n = int(data[0])
+    votes = data[1:]
+   
+    vote_count = {}
+   
+    for vote in votes:
+        if vote in vote_count:
+            vote_count[vote] += 1
+        else:
+            vote_count[vote] = 1
+   
+    # Find the candidate with the maximum votes
+    max_votes = 0
+    winner = ""
+   
+    for candidate, count in vote_count.items():
+        if count > max_votes or (count == max_votes and candidate < winner):
+            max_votes = count
+            winner = candidate
+           
+    print(winner)
 
-Coders here is a simple task for you, Given string str. Your task is to check whether it is a binary string or not by using python set.
-
-
-
-Examples:  
-
-Input: str = "01010101010"
-
-Output: Yes
-
-
-
-Input: str = "REC101"
-
-Output: No
-
-
-
-
-
-For example:
-
-Input	Result
-
-01010101010	Yes
-
-010101 10101	No
-
-
-
-a = input()
-
-try:
-
-    c = int(a)
-
-    print("Yes")
-
-except:
-
-    print("No")
+if __name__ == "__main__":
+    find_winner()
