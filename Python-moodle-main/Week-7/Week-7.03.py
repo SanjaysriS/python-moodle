@@ -1,86 +1,19 @@
-Check Product of Digits
+# Accept input from the user
+n, m = map(int, input().split())
+arr1 = list(map(int, input().split()))
+arr2 = list(map(int, input().split()))
 
-Write a code to check whether product of digits at even places is divisible by sum of digits at odd place of a positive integer.
+# Create sets from the arrays to find unique elements
+set1 = set(arr1)
+set2 = set(arr2)
 
-Input Format:
+# Find non-repeating elements
+non_repeating = (set1.symmetric_difference(set2))
 
-
-
-Take an input integer from stdin.
-
-
-
-Output Format:
-
-
-
-Print TRUE or FALSE.
-
-
-
-Example Input:
-
-
-
-1256
-
-
-
-Output:
-
-
-
-TRUE
-
-
-
-Example Input:
-
-
-
-1595
-
-
-
-Output:
-
-
-
-FALSE
-
-
-
-For example:
-
-
-
-Test	Result
-
-print(productDigits(1256))	True
-
-print(productDigits(1595))	False
-
-
-
-def productDigits(n):
-
-    a=str(n)
-
-    s,p=0,1
-
-    for i in range(0,len(a),2):
-
-        s+=int(a[i])
-
-    for i in range(1,len(a),2):
-
-        p*=int(a[i])
-
-    if(p%s==0):
-
-        return("True")
-
-    else:
-
-        return("False")
+# Print the non-repeating elements and their count
+if non_repeating:
+    print(*non_repeating)
+    print(len(non_repeating))
+else:
+    print("NO SUCH ELEMENTS")
 
