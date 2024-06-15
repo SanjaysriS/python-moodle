@@ -1,68 +1,42 @@
-Check Pair
+n= int(input())
+input_lines = [input() for i in range(n)]
+lines_split = [input_lines[i].split(" ") for i in range(len(input_lines))]
 
-Given a tuple and a positive integer k, the task is to find the count of distinct pairs in the tuple whose sum is equal to K.
+student_names = []
 
-Examples:
+for i in range(len(lines_split)):
+    student_names.append(lines_split[i][0])
 
-Input: t = (5, 6, 5, 7, 7, 8 ), K = 13 
+test_mark = []
+assignment_mark = []
+lab_mark = []
 
-Output: 2 
+for i in range(len(lines_split)):
+    test_mark.append(int(lines_split[i][1]))
+    assignment_mark.append(int(lines_split[i][2]))
+    lab_mark.append(int(lines_split[i][3]))
+average = []
+for i in range(len(lines_split)):
+    average.append((test_mark[i]+assignment_mark[i]+lab_mark[i])//3)
 
-Explanation: 
+max_average = max(average)
+max_assignment = max(assignment_mark)
+min_lab_mark = min(lab_mark)
+min_average = min(average)
 
-Pairs with sum K( = 13) are  {(5, 8), (6, 7), (6, 7)}. 
+index_max_average = []
+index_max_assignment = []
+index_min_lab_mark = []
+index_min_average = []
 
-Therefore, distinct pairs with sum K( = 13) are { (5, 8), (6, 7) }. 
+for i in range(len(average)):
+    if average[i] == max_average:
+        index_max_average.append(i)
+    if average[i] == min_average:
+        index_min_average.append(i)
 
-Therefore, the required output is 2.
-
-
-
-For example:
-
-Input	Result
-
-1,2,1,2,5
-
-3	1
-
-1,2
-
-0	0
-
-
-
-t = input()
-
-k = int(input())
-
-a = t.split(",")
-
-l = [int(x) for x in a]
-
-count = 0
-
-x = set()
-
-
-
-for i in range(len(l)):
-
-    for j in range(i + 1, len(l)):
-
-        if l[i] + l[j] == k:
-
-            s = (l[i], l[j])
-
-            if s not in x and (l[j], l[i]) not in x:
-
-                count += 1
-
-                x.add(s)
-
-
-
-print(count)
-
-
-
+for i in range(len(assignment_mark)):
+    if assignment_mark[i] == max_assignment:
+        index_max_assignment.append(i)
+for i in range(len(lab_mark)):
+    if lab_mark[i] == m
