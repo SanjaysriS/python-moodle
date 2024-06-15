@@ -1,38 +1,16 @@
-String characters balance Test
-
-
-
-Write a program to check if two strings are balanced. For example, strings s1 and s2 are balanced if all the characters in the s1 are present in s2. The character’s position doesn’t matter. If balanced display as "true" ,otherwise "false".
-
-
-
-For example:
-
-
-
-Input	Result
-
-Yn
-
-PYnative
-
-True
-
-
-
-a=input()
-
-b=input()
-
-if a in b:
-
-    print("True")
-
-else:
-
-    print("False")
-
-
-
-
-
+a=int(input())
+for _ in range(a):
+    l=[]
+    s=0
+    n = int(input())
+    for _ in range(n):
+        l.append(int(input()))
+    k=int(input())
+    for i in range(n):
+        for j in range(i+1,n):
+            if l[j]-l[i]==k and i!=j:
+                s=1
+                break
+        if(s):
+            break
+    print(s)
