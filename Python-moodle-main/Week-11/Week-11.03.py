@@ -1,48 +1,14 @@
-Problem Description:
+import math
 
-Write a Python script that asks the user to enter a number within a specified range (e.g., 1 to 100). Handle exceptions for invalid inputs and out-of-range numbers.
-
-Input Format:
-
-User inputs a number.
-
-Output Format:
-
-Confirm the input or print an error message if it's invalid or out of range.
-
-For example:
-
-Input	Result
-
-1	Valid input.
-
-101	Error: Number out of allowed range
-
-rec	Error: invalid literal for int()
-
-
-
-def main():
-
-    min_range = 1
-
-    max_range = 100
-
-
-
+while True:
     try:
-
-        num = int(input())
-
-        if num < min_range or num > max_range:
-
-            print("Error: Number out of allowed range")
-
+        user_input = float(input(""))
+        if user_input < 0:
+            print("Error: Cannot calculate the square root of a negative number.")
         else:
-
-            print("Valid input.")
-
+            square_root = math.sqrt(user_input)
+            print(f"The square root of {user_input} is {square_root:.2f}")
+        break
     except ValueError:
-
-        print("Error: invalid literal for int()")
-
+        print("Error: could not convert string to float")
+        break
