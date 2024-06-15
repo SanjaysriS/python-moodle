@@ -1,28 +1,14 @@
-Return last digit of the given number
-
-Write a program that returns the last digit of the given number. Last digit is being referred to the least significant digit i.e. the digit in the ones (units) place in the given number.
-
-The last digit should be returned as a positive number.
-
-For example,
-
-if the given number is 197, the last digit is 7
-
-if the given number is -197, the last digit is 7
-
-For example:
-
-Input	Result
-
-123	3
-
-
-
 
 
 
 
 a=int(input())
-
-print(abs(a)%10)
-
+b=int(input())
+c=int(input())
+d=int(input())
+e=int(input())
+b1=b%a==0
+c1=c%a==0
+d1=d%a==0
+e1=e%a==0
+print(b1,c1,d1,e1)
