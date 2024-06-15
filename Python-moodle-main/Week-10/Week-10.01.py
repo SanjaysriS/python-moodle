@@ -1,43 +1,16 @@
-Merge Sort
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
 
-Write a Python program to sort a list of elements using the merge sort algorithm.
+# Accept input from the user
+n = int(input())
+arr = list(map(int, input().split()))
 
+# Perform bubble sort
+bubble_sort(arr)
 
-
-For example:
-
-Input	Result
-
-5
-
-6 5 4 3 8
-
-	3 4 5 6 8
-
-
-
-
-
-a=int(input())
-
-l=[]
-
-l.extend(input().split())
-
-for i in range(a-1):
-
-    for j in range(a-1):
-
-        if(int(l[j])>int(l[j+1])):
-
-            t=int(l[j])
-
-            l[j]=int(l[j+1])
-
-            l[j+1]=t
-
-for i in range(a):
-
-    print(int(l[i]),end=" ")
-
-
+# Print the sorted list
+print(*arr)
