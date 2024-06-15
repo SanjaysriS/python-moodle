@@ -1,82 +1,26 @@
-Frequency of Elements
+def find_peak_elements(n, arr):
+    peak_elements = []
 
-To find the frequency of numbers in a list and display in sorted order.
+    if n == 1:
+        peak_elements.append(arr[0])
+    elif arr[0] >= arr[1]:
+        peak_elements.append(arr[0])
 
-Constraints: 
+    for i in range(1, n - 1):
+        if arr[i - 1] <= arr[i] >= arr[i + 1]:
+            peak_elements.append(arr[i])
 
-1<=n, arr[i]<=100 
+    if arr[n - 1] >= arr[n - 2]:
+        peak_elements.append(arr[n - 1])
 
-Input: 
+    return peak_elements
 
-1 68 79 4 90 68 1 4 5 
-
-output:
-
- 1 2
-
- 4 2
-
- 5 1
-
- 68 2
-
- 79 1 
-
-90 1
-
-
-
-
-
-For example:
-
-Input	Result
-
-4 3 5 3 4 5	3 2
-
-4 2
-
-5 2
-
-
-
-
-
-def count_frequency(arr):
-
-    frequency = {}
-
-    
-
-    # Count the frequency of each number in the list
-
-    for num in arr:
-
-        frequency[num] = frequency.get(num, 0) + 1
-
-    
-
-    # Sort the dictionary based on keys
-
-    sorted_frequency = sorted(frequency.items())
-
-    
-
-    # Print the frequency of each number
-
-    for num, freq in sorted_frequency:
-
-        print(num, freq)
-
-
-
-# Input the list of numbers
-
+# Input handling
+n = int(input())
 arr = list(map(int, input().split()))
 
+# Finding peak elements
+peak_elements = find_peak_elements(n, arr)
 
-
-# Count the frequency and print the result
-
-count_frequency(arr)
-
+# Output peak elements separated by space
+print(" ".join(map(str, peak_elements)))
