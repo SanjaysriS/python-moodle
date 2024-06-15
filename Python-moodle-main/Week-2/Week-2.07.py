@@ -1,44 +1,27 @@
-Mr.Ram has been given a problem kindly help him to solve it. The input of the program is either 0 or 1. IF 0 is the input he should display "C" if 1 is the input it should display "D".There is a constraint that Mr. Ram should use either logical operators or arithmetic operators to solve the problem, not anything else.
+Write a program that returns the last digit of the given number. Last digit is being referred to the least significant digit i.e. the digit in the ones (units) place in the given number.
 
-Hint:
+The last digit should be returned as a positive number.
 
-Use ASCII values of C and D.
+For example,
 
-Input Format:
+if the given number is 197, the last digit is 7
 
-An integer x, 0<=x<=1. .
-
-Output Format:
-
-output a single character "C" or "D"depending on the value of x.
-
-Input 1:
-0
-Output 1:
-C
-
-
-Input 2:
-1
-
-Output 1:
-D
-
-
+if the given number is -197, the last digit is 7
 
 
 
 For example:
 
 Input	Result
-0
-C
+197
+7
+-197
+7
 
 
 
-num=int(input())
-if num==0:
-    print("C")
-else:
-    print("D")
 
+a=int(input())
+a=(abs(a))
+c=a%10
+print(c)
