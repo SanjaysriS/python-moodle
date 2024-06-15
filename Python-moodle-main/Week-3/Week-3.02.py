@@ -1,50 +1,12 @@
-Classifying Triangles
-
-A triangle can be classified based on the lengths of its sides as equilateral, isosceles or scalene. All three sides of an equilateral triangle have the same length. An isosceles triangle has two sides that are the same length, and a third side that is a different length. If all of the sides have different lengths then the triangle is scalene.
-
-Write a program that reads the lengths of the three sides of a triangle from the user. Then display a message that states the triangle’s type.
-
-Sample Input 1
-
-60
-
-60
-
-60
-
-Sample Output 1
-
-That's a equilateral triangle
 
 
-
-
-
-For example:
-
-Input	Result
-
-40
-
-40
-
-80	That's a isosceles triangle
-
-a=int(input())
-
-b=int(input())
-
-c=int(input())
-
-if(a==b and b==c):
-
+s1=int(input())
+s2=int(input())
+s3=int(input())
+if(s1==s2==s3):
     print("That's a equilateral triangle")
-
-elif(a!=b and b==c or a==b and b!=c):
-
+elif(s1==s2!=s3):
     print("That's a isosceles triangle")
-
-elif(a!=b and b!=c):
-
+else:
     print("That's a scalene triangle")
 
