@@ -1,43 +1,19 @@
-Automorphic number or not
+def countDistinctPairs(t, k):
+    pair_set = set()
+    distinct_pairs = set()
+    for num in t:
+        complement = k - num
+        if complement in pair_set:
+            distinct_pairs.add((min(num, complement), max(num, complement)))
+        pair_set.add(num)
+    return len(distinct_pairs)
 
-An automorphic number is a number whose square ends with the number itself. For example, 5 is an automorphic number because 5*5 =25. The last digit is 5 which same as the given number. 
+# Accept input from the user
+t = tuple(map(int, input().split(',')))
+k = int(input())
 
+# Calculate the count of distinct pairs
+result = countDistinctPairs(t, k)
 
-
-If the number is not valid, it should display “Invalid input”.
-
-If it is an automorphic number display “Automorphic” else display “Not Automorphic”.
-
-
-
-Input Format:
-
-Take a Integer from Stdin 
-
-Output Format: 
-
-Print Automorphic if given number is Automorphic number, otherwise Not Automorphic 
-
-Example input: 5 Output: Automorphic Example input: 25 Output: Automorphic Example input: 7 Output: Not Automorphic
-
-For example:
-
-Test				Result
-
-print(automorphic(5))	Automorphic
-
-
-
-def automorphic(n):
-
-    a=str(n*n)
-
-    if(int(a[-1])==n):
-
-        return("Automorphic")
-
-    else:
-
-        return("Not Automorphic")
-
-  
+# Print the result
+print(result)
