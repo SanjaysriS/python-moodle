@@ -1,55 +1,18 @@
+def get_input_within_range(min_value, max_value):
+    while True:
+        try:
+            user_input = int(input("Enter a number: "))
+            if min_value <= user_input <= max_value:
+                print("Valid input.")
+                break
+            else:
+                print("Error: Number out of allowed range.")
+        except ValueError:
+            print("Error: Invalid literal for int(). Please enter a valid number.")
 
-Write a Python program that asks the user for their age and prints a message based on the age. Ensure that the program handles cases where the input is not a valid integer.
+# Define the range
+min_range = 1
+max_range = 100
 
-Input Format: A single line input representing the user's age.
-
-Output Format: Print a message based on the age or an error if the input is invalid.
-
-
-
-
-
-For example:
-
-Input	Result
-
-twenty
-
-	Error: Please enter a valid age.
-
-
-
-25
-
-	You are 25 years old.
-
-
-
--1
-
-	Error: Please enter a valid age.
-
-
-
-
-
-try:
-
-    a=input()
-
-    if(len(a)==0):
-
-        print("Error: Please enter a valid age.")
-
-    elif a.isnumeric():
-
-        print("You are",a,"years old.")
-
-    else:
-
-        print("Error: Please enter a valid age.")
-
-except:
-
-    print("Error: Please enter a valid age.")
-
+# Call the function with the defined range
+get_input_within_range(min_range, max_range)
